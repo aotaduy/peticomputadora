@@ -5,7 +5,7 @@ import {ExecutionContextState} from './execution-context-state';
 
 
 export class ControlUnit {
-  private memory: Memory;
+  memory: Memory;
   public halt = false;
   public programCounter = 0;
   public accumulator = 0;
@@ -79,5 +79,10 @@ export class ControlUnit {
 
   load(program: Instruction[]) {
     program.forEach((instruction, index) => this.memory.set(index, instruction.code));
+  }
+
+  memorySnapshot(size) {
+    const indexes = Array(size).fill(0).map((each, index) => index);
+    return indexes.map(index => this.instructionSet.instructionFor(this.memory.get(index)));
   }
 }

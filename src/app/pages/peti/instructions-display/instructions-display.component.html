@@ -1,4 +1,4 @@
-<ol>
+<ol start="0">
   <li *ngFor="let instruction of instructions ; index as i " [class.highlight]=" i ===  line">
     <ngx-instruction [instruction]="instruction"></ngx-instruction>
   </li>

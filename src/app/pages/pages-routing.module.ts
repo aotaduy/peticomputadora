@@ -59,7 +59,7 @@ const routes: Routes = [
 
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'peticomputadora',
       pathMatch: 'full',
     },
     {

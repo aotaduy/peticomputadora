@@ -10,10 +10,15 @@ export class Byte {
     const answer =  leadingBits.concat(numberBits);
     return answer;
   }
+  public static from8bitInteger(value) {
+    return new Byte(Byte.bitsFor(value, 8));
+  }
+
   constructor(bits = ZeroBits) {
     this.bits = bits;
   }
   asInteger() {
     return this.bits.reduce( (sum, each, index) => sum + each * 2 ** (7 - index), 0);
   }
+
 }

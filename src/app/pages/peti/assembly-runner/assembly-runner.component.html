@@ -8,7 +8,10 @@
     <app-instructions-display [instructions]="instructions" [line]="programCounter"></app-instructions-display>
     <ng-container *ngIf="lastInstruction">
       <div>
-        contador: {{programCounter}}
+        Contador Programa: {{programCounter}}
+      </div>
+      <div>
+        Acumulador: {{this.controlUnit.accumulator}}
       </div>
     </ng-container>
   </nb-card-body>

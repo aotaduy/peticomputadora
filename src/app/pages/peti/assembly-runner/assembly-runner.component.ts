@@ -22,7 +22,7 @@ export class AssemblyRunnerComponent implements OnInit {
   stopRunning;
   controlUnit: ControlUnit;
   programCounter: number;
-   lastInstruction: any;
+  lastInstruction: any;
   constructor(
     private parser: AssemblyParser,
   ) { }
@@ -47,7 +47,8 @@ export class AssemblyRunnerComponent implements OnInit {
     this.controlUnit.runInstruction();
     this.lastInstruction = this.controlUnit.decodedInstruction;
     this.programCounter = this.controlUnit.programCounter;
-    this.executions.emit(this.controlUnit.executions)
+    this.instructions = this.controlUnit.memorySnapshot(this.instructions.length)
+    this.executions.emit(this.controlUnit.executions);
   }
 
   goEdit() {
@@ -59,4 +60,5 @@ export class AssemblyRunnerComponent implements OnInit {
     clearInterval(this.stopRunning);
     this.executions.emit(this.controlUnit.executions)
   }
+
 }
