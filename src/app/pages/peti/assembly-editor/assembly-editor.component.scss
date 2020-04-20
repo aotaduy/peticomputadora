@@ -1,0 +1,37 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.editor-form {
+  width: 200px;
+}
+
+.editor {
+
+  font-family: monospace, sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  height: 415px;
+  overflow-y: scroll;
+  textarea {
+    height: 768px;
+  };
+ }
+
+ .line-numbers {
+   margin-top: 4px;
+   width: 3rem;
+ }
+
+ .line-number {
+   height: 23px;
+   font-family: monospace;
+   font-size: 1.2rem;
+ }

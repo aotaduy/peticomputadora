@@ -1,0 +1,19 @@
+<nb-card>
+  <nb-card-header>
+    Programa
+    <button (click)="goEdit()" class="btn btn-secondary btn-sm">Editar</button>
+  </nb-card-header>
+  <nb-card-body>
+
+    <app-instructions-display [instructions]="instructions" [line]="programCounter"></app-instructions-display>
+    <ng-container *ngIf="lastInstruction">
+      <div>
+        contador: {{programCounter}}
+      </div>
+    </ng-container>
+  </nb-card-body>
+  <nb-card-footer>
+    <button (click)="runProgram()" class="btn btn-primary btn-sm">Ejecutar</button>
+    <button (click)="stop()" class="btn btn-secondary btn-sm">Parar</button>
+  </nb-card-footer>
+</nb-card>

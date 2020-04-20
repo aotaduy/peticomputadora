@@ -1,0 +1,5 @@
+<span class="bits">{{instruction.asBinaryString()}}</span> -
+<span class="decimal">{{instruction.getValue()}}</span> -
+<ng-container *ngIf="!instruction.isData()">
+  {{instruction.mnemonic()}} {{instruction.getAddress()}}
+</ng-container>

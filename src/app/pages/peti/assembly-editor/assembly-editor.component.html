@@ -1,0 +1,26 @@
+<nb-card [accent]="accent">
+  <nb-card-header>
+    Programa Fuente
+    <button class="btn btn-primary btn-sm" (click)="compile()">Ejecutar
+    </button>
+  </nb-card-header>
+  <nb-card-body>
+
+  <form [formGroup]="form" class="editor-form">
+    <div class="editor">
+      <div class="line-numbers">
+        <ol>
+          <li
+            class="line-number"
+            *ngFor="let lineNumber of lineNumbers"></li>
+        </ol>
+      </div>
+    <textarea formControlName="code" name="code" id="code" cols="10" rows="32">
+    </textarea>
+    </div>
+    <alert type="danger" *ngIf="this.error">
+      {{this.error && this.error.message}}
+    </alert>
+  </form>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,18 @@
+<div class="row" [hidden]="!isEditing">
+  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-5">
+      <app-assembly-editor (compiled)="setInstructions($event)"></app-assembly-editor>
+  </div>
+  <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-7">
+    <ngx-assembly-instructions-help></ngx-assembly-instructions-help>
+  </div>
+</div>
+<div class="row" [hidden]="isEditing">
+  <div class="col-xxxl-3 col-xxl-4 col-lg-4 col-md-5">
+      <ngx-assembly-runner [instructions]="instructions" (executions)="setExecutions($event)" (edit)="edit()"></ngx-assembly-runner>
+  </div>
+
+  <div class="col-xxxl-3 col-xxl-4 col-lg-8 col-md-7">
+    <ngx-execution-display [executions]="this.executions"></ngx-execution-display>
+  </div>
+
+</div>
