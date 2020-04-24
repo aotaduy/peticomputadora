@@ -26,7 +26,7 @@ const routes: Routes = [
     },
     {
       path: '',
-      redirectTo: 'peticomputadora',
+      redirectTo: 'bienvenidos',
       pathMatch: 'full',
     },
     {
