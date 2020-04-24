@@ -14,7 +14,7 @@
     "conventional-changelog": "conventional-changelog",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "npm run build -- --prod --aot",
+    "build:prod": "npm run build -- --prod --aot --base-href=/peticomputadora/",
     "test": "ng test",
     "test:coverage": "rimraf coverage && npm run test -- --code-coverage",
     "lint": "ng lint",
@@ -28,6 +28,7 @@
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "prepare-release": "npm run build:prod && xcopy dist docs /S /Y",
+    "release": "npm run prepare-release && git add . & git commit -m \"release\" && git push",
     "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points"
   },
   "dependencies": {
