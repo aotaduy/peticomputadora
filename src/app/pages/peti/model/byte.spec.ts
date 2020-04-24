@@ -10,9 +10,17 @@ describe( 'Byte', () => {
     const subject = new Byte(OneBits);
     expect(subject.asInteger()).toEqual(1);
   });
-  it('should convert 31 bits', () => {
+  it('should convert zero bits', () => {
+    const subject = new Byte([1, 0, 0, 0, 0, 0, 0, 1 ]);
+    expect(subject.asInteger()).toEqual(-1);
+  });
+  it('should convert -127 bits', () => {
     const subject = new Byte([1, 1, 1, 1, 1, 1, 1, 1 ]);
-    expect(subject.asInteger()).toEqual(255);
+    expect(subject.asInteger()).toEqual(-127);
+  });
+  it('should convert 127 bits', () => {
+    const subject = new Byte([0, 1, 1, 1, 1, 1, 1, 1 ]);
+    expect(subject.asInteger()).toEqual(127);
   });
   it('should convert 31 bits', () => {
     const subject = new Byte([0, 1, 1, 1, 1, 1, 1, 1 ]);

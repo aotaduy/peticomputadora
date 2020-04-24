@@ -1,5 +1,5 @@
 import {Instruction} from './instructions/instruction';
-import {ControlUnit} from './control-unit';
+import {Computer} from './computer';
 
 export class ExecutionContextState {
   instruction: Instruction;
@@ -8,7 +8,7 @@ export class ExecutionContextState {
   halt: boolean;
   count: number;
 
-  constructor(computer: ControlUnit) {
+  constructor(computer: Computer) {
     this.instruction = computer.decodedInstruction;
     this.programCounter = computer.programCounter;
     this.acumulator = computer.accumulator;
@@ -16,7 +16,7 @@ export class ExecutionContextState {
     this.count = computer.executions.length;
   }
 
-  updateWith(computer: ControlUnit) {
+  updateWith(computer: Computer) {
 
   }
 

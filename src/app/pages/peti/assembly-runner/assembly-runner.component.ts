@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Instruction} from '../model/instructions/instruction';
 import {AssemblyParser} from '../model/assembly-parser';
-import {ControlUnit} from '../model/control-unit';
-import {ExecutionContextState} from "../model/execution-context-state";
+import {Computer} from '../model/computer';
+import {ExecutionContextState} from '../model/execution-context-state';
 
 function input() {
 
@@ -20,23 +20,25 @@ export class AssemblyRunnerComponent implements OnInit {
   @Output() edit = new EventEmitter();
   @Output() executions = new EventEmitter<ExecutionContextState[]>();
   stopRunning;
-  controlUnit: ControlUnit;
+  controlUnit: Computer;
   programCounter: number;
   lastInstruction: any;
+
   constructor(
     private parser: AssemblyParser,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
-  runProgram(){
+  runProgram() {
     this.loadProgram();
-    this.stopRunning = setInterval( () => this.runInstruction(), this.delay);
+    this.stopRunning = setInterval(() => this.runInstruction(), this.delay);
   }
 
   loadProgram() {
-    this.controlUnit = new ControlUnit();
+    this.controlUnit = new Computer();
     this.controlUnit.load(this.instructions);
   }
 
@@ -47,18 +49,18 @@ export class AssemblyRunnerComponent implements OnInit {
     this.controlUnit.runInstruction();
     this.lastInstruction = this.controlUnit.decodedInstruction;
     this.programCounter = this.controlUnit.programCounter;
-    this.instructions = this.controlUnit.memorySnapshot(this.instructions.length)
+    this.instructions = this.controlUnit.memorySnapshot(this.instructions.length);
     this.executions.emit(this.controlUnit.executions);
   }
 
   goEdit() {
-    this.stop()
+    this.stop();
     this.edit.emit();
   }
 
   stop() {
     clearInterval(this.stopRunning);
-    this.executions.emit(this.controlUnit.executions)
+    this.executions.emit(this.controlUnit.executions);
   }
 
 }

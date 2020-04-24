@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header>
+    {{program.title}}
+    <button class="btn btn-primary btn-sm" (click)="load()">Ejecutar</button>
+  </nb-card-header>
+  <nb-card-body>
+    <p>{{program.description}}</p>
+    <pre><code>{{program.program}}
+    </code></pre>
+  </nb-card-body>
+</nb-card>

@@ -1,6 +1,6 @@
 import {Instruction} from './instruction';
 import {ArithmeticExecutionContextState} from '../arithmetic-execution-context.state';
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 
 export abstract class ArithmeticInstruction extends Instruction {
 
@@ -26,7 +26,7 @@ A = ${context.accumulatorAfter}
     return '+';
   }
 
-  newContextFor(computer: ControlUnit) {
+  newContextFor(computer: Computer) {
     return new ArithmeticExecutionContextState(computer);
   }
 }

@@ -1,5 +1,5 @@
 import {Instruction} from './instruction';
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 
 
 export class Jump extends Instruction {
@@ -9,7 +9,7 @@ export class Jump extends Instruction {
     return 'JUI';
   }
 
-  executeOn(computer: ControlUnit) {
+  executeOn(computer: Computer) {
     computer.jumpTo(this.getAddress());
   }
 

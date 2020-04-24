@@ -10,15 +10,29 @@ export class Byte {
     const answer =  leadingBits.concat(numberBits);
     return answer;
   }
+  public static signedBitsFor(value, length) {
+    const signBit = value < 0 ? 1 : 0;
+    return [signBit].concat(this.bitsFor(Math.abs(value), length - 1));
+  }
+
   public static from8bitInteger(value) {
-    return new Byte(Byte.bitsFor(value, 8));
+    return new Byte(Byte.signedBitsFor(value, 8));
   }
 
   constructor(bits = ZeroBits) {
     this.bits = bits;
   }
+  signBit() {
+    return this.bits[0];
+  }
+  signValue() {
+    return this.signBit() === 1 ? -1 : 1;
+  }
+  absoluteValuBits() {
+    return this.bits.slice(1);
+  }
   asInteger() {
-    return this.bits.reduce( (sum, each, index) => sum + each * 2 ** (7 - index), 0);
+    return this.absoluteValuBits().reduce( (sum, each, index) => sum + each * 2 ** (6 - index), 0) * this.signValue();
   }
 
 }

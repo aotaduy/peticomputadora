@@ -1,5 +1,5 @@
 import {Instruction} from './instruction';
-import {ControlUnit} from "../control-unit";
+import {Computer} from "../computer";
 import {Byte} from "../byte";
 
 export class Store extends Instruction {
@@ -9,7 +9,7 @@ export class Store extends Instruction {
     return 'STR';
   }
 
-  executeOn(computer: ControlUnit) {
+  executeOn(computer: Computer) {
     computer.memory.set(this.getAddress(), Byte.from8bitInteger( computer.accumulator));
   }
   toStringWith(context) {

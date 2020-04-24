@@ -1,10 +1,10 @@
 import {AssemblyParser} from '../assembly-parser';
 import {InstructionSet} from '../instruction-set';
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 import {Memory} from '../memory';
 
 describe( 'Jump Program', () => {
-  let parser, computer: ControlUnit;
+  let parser, computer: Computer;
   const program = `STR 30
 STR 30
 ADD 12
@@ -22,7 +22,7 @@ JUI 06
 `;
   beforeEach(() => {
     parser = new AssemblyParser( new InstructionSet());
-    computer = new ControlUnit(new Memory(32));
+    computer = new Computer(new Memory(32));
   });
 
   it('run', () => {

@@ -11,7 +11,7 @@ import {NbToastrService} from '@nebular/theme';
 })
 export class AssemblyEditorComponent implements OnInit, OnChanges {
 
-  @Input() code;
+  @Input() source;
   @Output() compiled = new EventEmitter<Instruction[]>();
   form: FormGroup;
   error: any;
@@ -41,12 +41,14 @@ JUI 06
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      code: new FormControl(this.defaultCode),
+      code: new FormControl(this.source || this.defaultCode),
     });
   }
 
   ngOnChanges() {
-    this.form.controls.code.setValue(this.code);
+    if (this.form) {
+      this.form.controls.code.setValue(this.source || this.defaultCode);
+    }
   }
   compile() {
     this.error = null;

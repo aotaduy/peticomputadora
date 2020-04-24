@@ -23,11 +23,6 @@
               "src/assets",
               "src/favicon.ico",
               "src/favicon.png",
-              {
-                "glob": "**/*",
-                "input": "node_modules/leaflet/dist/images",
-                "output": "/assets/img/markers"
-              }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
@@ -66,8 +61,12 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
-                }
-              ]
+                },
+              ],
+              "index": {
+                "input": "src/index.prod.html",
+                "output": "index.html"
+              }
             }
           }
         },
@@ -120,12 +119,7 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/favicon.png",
-              {
-                "glob": "**/*",
-                "input": "node_modules/leaflet/dist/images",
-                "output": "/assets/img/markers"
-              }
+              "src/favicon.png"
             ]
           }
         },
