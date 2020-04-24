@@ -75,19 +75,19 @@ STP
 export const sums = {
   title: 'Sumas sucesivas',
   description: 'Suma la posicion 11 hsata que el valor llegue al cotenido de la posicion 10',
-  program: `ADD 11
+  program: `STR 13
+SUB 13
+ADD 10
+ADD 11
 STR 10
 SUB 12
 JUN 00
 WRT
 STP
 00
-00
-00
-00
-10
-200
-250`
+0
+1
+10`
 };
 
 export const printer = {
