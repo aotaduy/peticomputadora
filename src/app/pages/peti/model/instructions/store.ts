@@ -1,6 +1,6 @@
 import {Instruction} from './instruction';
-import {Computer} from "../computer";
-import {Byte} from "../byte";
+import {Computer} from '../computer';
+import {Byte} from '../byte';
 
 export class Store extends Instruction {
   public static instructionBits = [0, 1, 1];
@@ -13,6 +13,6 @@ export class Store extends Instruction {
     computer.memory.set(this.getAddress(), Byte.from8bitInteger( computer.accumulator));
   }
   toStringWith(context) {
-    return `(${this.getAddress()}) = ${context.acumulator}`;
+    return `(${this.getAddress()}) = ${context.accumulator}`;
   }
 }

@@ -4,7 +4,7 @@ import {Computer} from '../computer';
 
 export abstract class ArithmeticInstruction extends Instruction {
 
-  executeOn(computer) {
+  executeOn(computer: Computer) {
     const operand = this.getOperand(computer);
     computer.accumulator = this.calculate(computer.accumulator, operand.asInteger());
   }
@@ -17,7 +17,7 @@ export abstract class ArithmeticInstruction extends Instruction {
 
   toStringWith(context: ArithmeticExecutionContextState) {
     return `A = A ${this.operatorString()} (${this.getAddress()})
-A = ${context.acumulator} ${this.operatorString()} ${context.operand.asInteger()}
+A = ${context.accumulator} ${this.operatorString()} ${context.operand.asInteger()}
 A = ${context.accumulatorAfter}
 `;
   }

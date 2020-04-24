@@ -16,6 +16,6 @@ export class Write extends Instruction {
   }
 
   toStringWith(context) {
-    return `PRINT ${context.acumulator}`;
+    return `PRINT ${context.accumulator}`;
   }
 }

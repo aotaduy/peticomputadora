@@ -43,6 +43,7 @@ export class AssemblyRunnerComponent implements OnInit {
   }
 
   runInstruction() {
+    console.log(this);
     if (this.controlUnit.isHalted()) {
       clearInterval(this.stopRunning);
     }

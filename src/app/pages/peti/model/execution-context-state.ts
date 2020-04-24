@@ -4,14 +4,14 @@ import {Computer} from './computer';
 export class ExecutionContextState {
   instruction: Instruction;
   programCounter: number;
-  acumulator: number;
+  accumulator: number;
   halt: boolean;
   count: number;
 
   constructor(computer: Computer) {
     this.instruction = computer.decodedInstruction;
     this.programCounter = computer.programCounter;
-    this.acumulator = computer.accumulator;
+    this.accumulator = computer.accumulator;
     this.halt = computer.halt;
     this.count = computer.executions.length;
   }
