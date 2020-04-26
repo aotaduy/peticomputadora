@@ -7,7 +7,7 @@ WRT
 STP
 123
 123
-123`
+123`,
 };
 
 export const add2numbers = {
@@ -24,7 +24,7 @@ STP
 100
 123
 124
-`
+`,
 };
 
 export const sub2numbers = {
@@ -41,7 +41,7 @@ STP
 0
 0
 100
-123`
+123`,
 };
 export const jump = {
   title: 'Salto incondicional',
@@ -57,7 +57,7 @@ STP
 00
 00
 30
-`
+`,
 };
 
 export const infiniteLoop = {
@@ -71,6 +71,23 @@ STP
 00
 10
 7`};
+
+
+export const jumpconditional = {
+  title: 'Salto condicoinal',
+  description: 'Ejemplo del apunte 4',
+  program: `STR 10
+SUB 10
+ADD 09
+JUP 06
+SUB 10
+SUB 10
+WRT 9
+STP 5
+00
+-5
+120
+`};
 
 export const sums = {
   title: 'Sumas sucesivas',
@@ -87,7 +104,7 @@ STP
 00
 0
 1
-10`
+10`,
 };
 
 export const printer = {
@@ -103,7 +120,7 @@ WRT
 STR 23
 SUB 23
 ADD 22
-ADD 24 
+ADD 24
 SUB 21
 JUN 03
 STP
@@ -117,5 +134,5 @@ STP
 10
 00
 00
-01`
+01`,
 };

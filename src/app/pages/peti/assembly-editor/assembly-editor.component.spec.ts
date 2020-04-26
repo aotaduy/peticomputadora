@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssemblyEditorComponent } from './assembly-editor.component';
-import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
-import {NbCardModule, NbToastrService} from "@nebular/theme";
-import {ReactiveFormsModule} from "@angular/forms";
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {NbCardModule, NbToastrService} from '@nebular/theme';
+import {ReactiveFormsModule} from '@angular/forms';
 
 xdescribe('AssemblyEditorComponent', () => {
   let component: AssemblyEditorComponent;
@@ -15,8 +15,8 @@ xdescribe('AssemblyEditorComponent', () => {
       imports: [ NbCardModule, ReactiveFormsModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
-        {provide: NbToastrService, useValue: {danger: () => {}}}
-      ]
+        {provide: NbToastrService, useValue: {danger: () => {}}},
+      ],
     })
     .compileComponents();
   }));

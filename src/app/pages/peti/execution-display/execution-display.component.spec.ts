@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExecutionDisplayComponent } from './execution-display.component';
-import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 xdescribe('ExecutionDisplayComponent', () => {
   let component: ExecutionDisplayComponent;
@@ -10,7 +10,7 @@ xdescribe('ExecutionDisplayComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ExecutionDisplayComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
     })
     .compileComponents();

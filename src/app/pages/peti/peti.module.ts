@@ -20,7 +20,7 @@ import { ExecutionDisplayComponent } from './execution-display/execution-display
     AssemblyRunnerComponent,
     InstructionComponent,
     AssemblyInstructionsHelpComponent,
-    ExecutionDisplayComponent
+    ExecutionDisplayComponent,
   ],
   imports: [
     ReactiveFormsModule,

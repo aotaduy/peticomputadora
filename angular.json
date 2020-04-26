@@ -37,7 +37,6 @@
             ],
             "scripts": [
               "node_modules/pace-js/pace.min.js",
-              "node_modules/chart.js/dist/Chart.min.js"
             ]
           },
           "configurations": {

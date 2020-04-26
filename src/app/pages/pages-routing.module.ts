@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import {PetiComputerIdeComponent} from './peti/peti-computer-ide/peti-computer-ide.component';
-import {PetiExamplesComponent} from "./peti-documentation/peti-examples/peti-examples.component";
-import {PetiWelcomeComponent} from "./peti-documentation/peti-welcome/peti-welcome.component";
+import {PetiExamplesComponent} from './peti-documentation/peti-examples/peti-examples.component';
+import {PetiWelcomeComponent} from './peti-documentation/peti-welcome/peti-welcome.component';
 
 const routes: Routes = [
   {

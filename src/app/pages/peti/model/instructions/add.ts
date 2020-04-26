@@ -11,6 +11,6 @@ export class Add extends ArithmeticInstruction {
     return value1 + value2;
   }
   protected operatorString() {
-    return '-';
+    return '+';
   }
 }

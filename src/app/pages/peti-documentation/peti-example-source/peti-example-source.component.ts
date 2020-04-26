@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 @Component({
   selector: 'ngx-peti-example-source',
   templateUrl: './peti-example-source.component.html',
-  styleUrls: ['./peti-example-source.component.scss']
+  styleUrls: ['./peti-example-source.component.scss'],
 })
 export class PetiExampleSourceComponent implements OnInit {
   @Input() program: any;
@@ -14,6 +14,6 @@ export class PetiExampleSourceComponent implements OnInit {
   }
 
   load() {
-    this.loadClicked.emit(this.program)
+    this.loadClicked.emit(this.program);
   }
 }

@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { PetiExamplesComponent } from './peti-examples/peti-examples.component';
 import { PetiDocumentationComponent } from './peti-documentation/peti-documentation.component';
 import { PetiExampleSourceComponent } from './peti-example-source/peti-example-source.component';
-import {NbCardModule} from "@nebular/theme";
-import {ReactiveFormsModule} from "@angular/forms";
+import {NbCardModule} from '@nebular/theme';
+import {ReactiveFormsModule} from '@angular/forms';
 import { PetiWelcomeComponent } from './peti-welcome/peti-welcome.component';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
 
 
 
@@ -17,6 +17,6 @@ import {RouterModule} from "@angular/router";
     CommonModule,
     NbCardModule,
     RouterModule,
-  ]
+  ],
 })
 export class PetiDocumentationModule { }

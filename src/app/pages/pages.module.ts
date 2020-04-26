@@ -5,7 +5,7 @@ import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PetiModule } from './peti/peti.module';
-import {PetiDocumentationModule} from "./peti-documentation/peti-documentation.module";
+import {PetiDocumentationModule} from './peti-documentation/peti-documentation.module';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import {PetiDocumentationModule} from "./peti-documentation/peti-documentation.m
     ThemeModule,
     NbMenuModule,
     PetiModule,
-    PetiDocumentationModule
+    PetiDocumentationModule,
   ],
   declarations: [
     PagesComponent,

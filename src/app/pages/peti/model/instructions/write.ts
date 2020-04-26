@@ -1,5 +1,5 @@
 import {Instruction} from './instruction';
-import {Computer} from "../computer";
+import {Computer} from '../computer';
 
 export class Write extends Instruction {
   public static instructionBits = [1, 1, 1];
