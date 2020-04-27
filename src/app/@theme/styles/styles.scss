@@ -17,6 +17,7 @@
 
 @import './layout';
 @import './overrides';
+@import '~highlight.js/styles/github.css';
 
 // install the framework and custom global styles
 @include nb-install() {
@@ -31,3 +32,15 @@
 
   @include nb-overrides();
 };
+
+td.hljs-ln-numbers {
+  user-select:none;
+  text-align:center;
+  border-right:1px solid gray;
+  vertical-align:top;
+  padding-right:8px !important;
+  padding-left:8px !important
+}
+td.hljs-ln-code {
+  padding-left:8px !important
+}

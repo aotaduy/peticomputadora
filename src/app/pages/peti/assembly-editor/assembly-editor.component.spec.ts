@@ -5,7 +5,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {NbCardModule, NbToastrService} from '@nebular/theme';
 import {ReactiveFormsModule} from '@angular/forms';
 
-xdescribe('AssemblyEditorComponent', () => {
+describe('AssemblyEditorComponent', () => {
   let component: AssemblyEditorComponent;
   let fixture: ComponentFixture<AssemblyEditorComponent>;
 

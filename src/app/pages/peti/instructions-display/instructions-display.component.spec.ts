@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { InstructionsDisplayComponent } from './instructions-display.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
-xdescribe('InstructionsDisplayComponent', () => {
+describe('InstructionsDisplayComponent', () => {
   let component: InstructionsDisplayComponent;
   let fixture: ComponentFixture<InstructionsDisplayComponent>;
 

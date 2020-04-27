@@ -5,19 +5,20 @@
   </nb-card-header>
   <nb-card-body>
 
-    <app-instructions-display [instructions]="instructions" [line]="programCounter"></app-instructions-display>
+    <app-instructions-display [instructions]="instructions" [line]="this.hihglighLine()"></app-instructions-display>
     <ng-container *ngIf="lastInstruction">
       <div>
-        Contador Programa: {{programCounter}}
+        Contador Programa: {{this.controlUnit.programCounter}}
       </div>
       <div>
         Acumulador: {{this.controlUnit.accumulator}}
       </div>
     </ng-container>
   </nb-card-body>
-  <nb-card-footer>
-    <button (click)="runProgram()" class="btn btn-primary btn-sm">Ejecutar</button>
-    <button (click)="runInstruction()" class="btn btn-primary btn-sm">Paso</button>
-    <button (click)="stop()" class="btn btn-secondary btn-sm">Parar</button>
+  <nb-card-footer class="control-buttons">
+    <button (click)="runProgram()" class="btn btn-primary btn-sm" title="Ejecutar"><span class="ion ion-play"></span></button>
+    <button (click)="stepInstruction()" class="btn btn-primary btn-sm" title="Paso a Paso"><span class="ion ion-arrow-down-b"></span></button>
+    <button (click)="stop()" class="btn btn-secondary btn-sm" title="stop"><span class="ion ion-stop"></span></button>
+    <button (click)="reset()" class="btn btn-danger btn-sm" title="Reset"><span class="ion ion-refresh"></span></button>
   </nb-card-footer>
 </nb-card>

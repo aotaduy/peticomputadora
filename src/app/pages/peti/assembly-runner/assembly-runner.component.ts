@@ -33,13 +33,15 @@ export class AssemblyRunnerComponent implements OnInit {
   }
 
   runProgram() {
-    this.loadProgram();
+    this.reset();
     this.stopRunning = setInterval(() => this.runInstruction(), this.delay);
   }
 
-  loadProgram() {
+  reset() {
+    clearInterval(this.stopRunning);
     this.controlUnit = new Computer();
     this.controlUnit.load(this.instructions);
+    this.executions.emit(this.controlUnit.executions);
   }
 
   runInstruction() {
@@ -53,6 +55,14 @@ export class AssemblyRunnerComponent implements OnInit {
     this.executions.emit(this.controlUnit.executions);
   }
 
+  stepInstruction() {
+    if (!this.controlUnit || this.controlUnit.isHalted() ) {
+      this.reset();
+    }
+    this.runInstruction();
+  }
+
+
   goEdit() {
     this.stop();
     this.edit.emit();
@@ -63,4 +73,7 @@ export class AssemblyRunnerComponent implements OnInit {
     this.executions.emit(this.controlUnit.executions);
   }
 
+  hihglighLine() {
+    return this.controlUnit ? this.controlUnit.programCounter : 0;
+  }
 }

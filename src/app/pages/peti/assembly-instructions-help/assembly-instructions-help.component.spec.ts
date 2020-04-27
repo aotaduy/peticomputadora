@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssemblyInstructionsHelpComponent } from './assembly-instructions-help.component';
 
-xdescribe('AssemblyInstructionsHelpComponent', () => {
+describe('AssemblyInstructionsHelpComponent', () => {
   let component: AssemblyInstructionsHelpComponent;
   let fixture: ComponentFixture<AssemblyInstructionsHelpComponent>;
 

@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AssemblyRunnerComponent } from './assembly-runner.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-xdescribe('AssemblyRunnerComponent', () => {
+describe('AssemblyRunnerComponent', () => {
   let component: AssemblyRunnerComponent;
   let fixture: ComponentFixture<AssemblyRunnerComponent>;
 

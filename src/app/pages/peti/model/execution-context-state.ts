@@ -10,7 +10,7 @@ export class ExecutionContextState {
 
   constructor(computer: Computer) {
     this.instruction = computer.decodedInstruction;
-    this.programCounter = computer.programCounter;
+    this.programCounter = computer.programCounter - 1;
     this.accumulator = computer.accumulator;
     this.halt = computer.halt;
     this.count = computer.executions.length;

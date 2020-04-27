@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ExecutionDisplayComponent } from './execution-display.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-xdescribe('ExecutionDisplayComponent', () => {
+describe('ExecutionDisplayComponent', () => {
   let component: ExecutionDisplayComponent;
   let fixture: ComponentFixture<ExecutionDisplayComponent>;
 

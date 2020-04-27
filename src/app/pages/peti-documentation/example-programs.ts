@@ -79,7 +79,7 @@ export const jumpconditional = {
   program: `STR 10
 SUB 10
 ADD 09
-JUP 06
+JUI 06
 SUB 10
 SUB 10
 WRT 9
@@ -136,3 +136,26 @@ STP
 00
 01`,
 };
+
+
+export const apunte5 = {
+  title: 'Salto Apunte',
+  description: 'Ejemplo de salto si la diferencia entre (12) y (19) es positivo, salta',
+  program: `STR 30
+STR 30
+ADD 12
+SUB 10
+JUP 08
+ADD 13
+WRT 00
+STP 00
+ADD 11
+JUI 06
+04
+01
+07
+02`,
+};
+
+
+

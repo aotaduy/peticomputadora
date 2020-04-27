@@ -4,17 +4,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Bienvenidos',
     icon: 'home-outline',
-    link: '/pages/bienvenidos',
+    link: '/bienvenidos',
     home: true,
   },
   {
     title: 'Ejemplos',
     icon: 'keypad-outline',
-    link: '/pages/ejemplos',
+    link: '/ejemplos',
   },
   {
     title: 'Peti-Computadora',
     icon: 'layout-outline',
-    link: '/pages/peticomputadora',
+    link: '/peticomputadora',
   },
 ];

@@ -5,7 +5,7 @@
   </nb-card-header>
   <nb-card-body>
     <p>{{program.description}}</p>
-    <pre><code>{{program.program}}
+    <pre><code [highlight]="program.program" [lineNumbers]="true" [languages]="['angelscript']">
     </code></pre>
   </nb-card-body>
 </nb-card>

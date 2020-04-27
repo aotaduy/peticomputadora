@@ -20,6 +20,8 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import {HIGHLIGHT_OPTIONS, HighlightModule, HighlightOptions} from 'ngx-highlightjs';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,6 +41,15 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    HighlightModule
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        lineNumbers: true,
+      },
+    },
   ],
   bootstrap: [AppComponent],
 })

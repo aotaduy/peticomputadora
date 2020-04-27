@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PetiWelcomeComponent } from './peti-welcome.component';
 
-xdescribe('PetiWelcomeComponent', () => {
+describe('PetiWelcomeComponent', () => {
   let component: PetiWelcomeComponent;
   let fixture: ComponentFixture<PetiWelcomeComponent>;
 
