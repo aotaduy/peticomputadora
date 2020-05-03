@@ -28,7 +28,7 @@
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "prepare-release": "npm run test && npm run build:prod && xcopy dist docs /S /Y",
-    "release": "npm run prepare-release && git add . & git commit -m \"release\" && npm version patch && git push",
+    "release": "npm run prepare-release && && git status && git add . & git commit -m \"release\" && npm version patch && git push",
     "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points"
   },
   "dependencies": {
