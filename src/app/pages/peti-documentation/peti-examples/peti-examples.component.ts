@@ -14,6 +14,6 @@ export class PetiExamplesComponent implements OnInit {
   ngOnInit(): void {
   }
   openIde(program) {
-    this.router.navigate(['/pages/peticomputadora'], {state: {program}});
+    this.router.navigate(['/peticomputadora'], {state: {program}});
   }
 }
