@@ -67,3 +67,10 @@ https://aotaduy.github.io/peticomputadora/
         <td> Imprimir A</td>
       </tr>
     </table>
+
+Mas documentación y algunos videos de como usarlo:
+
+https://aotaduy.github.io/area204/educaci%C3%B3n/2020/04/16/peticomputadora.html
+
+### Autor:
+ [Andres Otadyt Botas Blog](https://aotaduy.github.io/area204/)
