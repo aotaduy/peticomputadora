@@ -72,5 +72,8 @@ Mas documentación y algunos videos de como usarlo:
 
 https://aotaduy.github.io/area204/educaci%C3%B3n/2020/04/16/peticomputadora.html
 
+https://www.youtube.com/watch?v=pHxzo_o-rYs
+https://www.youtube.com/watch?v=Lou0unklKAw
+
 ### Autor:
  [Andres Otaduy Botas Blog](https://aotaduy.github.io/area204/)
