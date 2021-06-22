@@ -26,7 +26,11 @@ jobs:
     - run: git config --global user.email "bot@github.com"
     - run: git config --global user.name "Bot"
     - run: npm ci
-    - run: npm run release
-
-
-
+    - run: npm run test
+    - run: npm run build:prod
+    - run: rm -RF ./docs
+    - run: cp -Rf ./dist ./docs
+    - run: git status
+    - run: npm version patch
+    - run: git commit -am "Release"
+    - run: git push

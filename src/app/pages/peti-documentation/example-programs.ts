@@ -15,8 +15,8 @@ export const add2numbers = {
   description: 'Sumar los numeros en las posiciones 08 y 09 y mostrar el resultado',
   program: `STR 10
 SUB 10
-ADD 10
 ADD 11
+ADD 12
 WRT
 STP
 WRT
@@ -24,6 +24,8 @@ STP
 100
 123
 124
+11
+23
 `,
 };
 
