@@ -31,6 +31,6 @@ jobs:
     - run: rm -Rf ./docs
     - run: cp -Rf ./dist ./docs
     - run: git status
-    - run: npm version patch
     - run: git commit -am "Release"
+    - run: npm version patch
     - run: git push
