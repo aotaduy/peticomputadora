@@ -23,5 +23,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - run: git config --global user.email "bot@github.com"
+    - run: git config --global user.name "Bot"
     - run: npm ci
     - run: npm run release
+
+
+
