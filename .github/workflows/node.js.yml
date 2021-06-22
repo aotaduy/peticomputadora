@@ -28,7 +28,7 @@ jobs:
     - run: npm ci
     - run: npm run test
     - run: npm run build:prod
-    - run: rm -RF ./docs
+    - run: rm -Rf ./docs
     - run: cp -Rf ./dist ./docs
     - run: git status
     - run: npm version patch
