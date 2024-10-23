@@ -52,9 +52,9 @@ export class AssemblyParser {
 
   private parseNumber(sourceLine: string, line: number) {
       const result = Number.parseInt(sourceLine, 10);
-      if (result < 0 || result > 255 ) {
+      if (result < -127 || result > 127 ) {
         throw  new Error(`Constante fuera de rango ${result}, linea: ${line}`);
       }
-      return new Data(new Byte(Byte.bitsFor(result, 8)));
+      return new Data(Byte.from8bitInteger(result));
     }
 }

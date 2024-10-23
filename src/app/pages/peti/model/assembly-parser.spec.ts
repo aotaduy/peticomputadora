@@ -13,7 +13,7 @@ describe( 'AssemblyParser', () => {
 
   it('parse one halt instruction', () => {
     const result = subject.parse('STP');
-    expect(result[0]).toBeInstanceOf(Stop);
+    expect(result[0].constructor.name).toEqual('Stop');
   });
 
   it('parse fail on unknown instruction ', () => {
@@ -31,8 +31,12 @@ describe( 'AssemblyParser', () => {
     expect(result[0].getAddress()).toEqual(1);
   });
   it('parse one number: 255', () => {
-    const result = subject.parse('255');
-    expect(result[0].getValue()).toEqual(255);
+    const result = subject.parse('127');
+    expect(result[0].getValue()).toEqual(127);
+  });
+  it('parse one number: -1', () => {
+    const result = subject.parse('-1');
+    expect(result[0].getValue()).toEqual(-1);
   });
   it('parse one number : 0', () => {
     const result = subject.parse('0');
@@ -44,32 +48,32 @@ describe( 'AssemblyParser', () => {
   });
   it('parse one ADD instruction with two digits', () => {
     const result = subject.parse('ADD 12');
-    expect(result[0]).toBeInstanceOf(Add);
+    expect(result[0].constructor.name).toEqual('Add');
     expect(result[0].getAddress()).toEqual(12);
   });
 
   it('parse one ADD instruction with leading zero', () => {
     const result = subject.parse('ADD 01');
-    expect(result[0]).toBeInstanceOf(Add);
+    expect(result[0].constructor.name).toEqual('Add');
     expect(result[0].getAddress()).toEqual(1);
   });
   it('parse two instructions ', () => {
     const result = subject.parse(`ADD 01
 STP`);
     expect(result.length).toEqual(2);
-    expect(result[0]).toBeInstanceOf(Add);
+    expect(result[0].constructor.name).toEqual('Add');
     expect(result[0].getAddress()).toEqual(1);
-    expect(result[1]).toBeInstanceOf(Stop);
+    expect(result[1].constructor.name).toEqual('Stop');
   });
   it('parse three instructions ', () => {
     const result = subject.parse(`ADD 01
 SUB 4
 STP`);
     expect(result.length).toEqual(3);
-    expect(result[0]).toBeInstanceOf(Add);
+    expect(result[0].constructor.name).toEqual('Add');
     expect(result[0].getAddress()).toEqual(1);
-    expect(result[1]).toBeInstanceOf(Subtract);
-    expect(result[2]).toBeInstanceOf(Stop);
+    expect(result[1].constructor.name).toEqual('Subtract');
+    expect(result[2].constructor.name).toEqual('Stop');
   });
 
 });

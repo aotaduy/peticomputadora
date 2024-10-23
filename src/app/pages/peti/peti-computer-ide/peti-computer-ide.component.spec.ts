@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PetiComputerIdeComponent } from './peti-computer-ide.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('PetiComputerIdeComponent', () => {
   let component: PetiComputerIdeComponent;
@@ -9,6 +11,9 @@ describe('PetiComputerIdeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PetiComputerIdeComponent ],
+      imports:[RouterTestingModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
     })
     .compileComponents();
   }));

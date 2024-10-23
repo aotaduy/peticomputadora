@@ -1,5 +1,5 @@
 import {Byte} from '../byte';
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 import {ExecutionContextState} from '../execution-context-state';
 
 
@@ -49,7 +49,7 @@ export abstract class Instruction {
     return this.code.bits.join('');
   }
 
-  newContextFor(computer: ControlUnit) {
+  newContextFor(computer: Computer) {
     return new ExecutionContextState(computer);
   }
 

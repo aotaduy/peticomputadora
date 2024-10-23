@@ -6,4 +6,9 @@
     align-items: center;
     justify-content: space-between;
   }
+  .control-buttons {
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+  }
 }

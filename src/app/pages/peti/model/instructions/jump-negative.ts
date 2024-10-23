@@ -1,4 +1,4 @@
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 import {Jump} from './jump';
 import {ExecutionContextState} from '../execution-context-state';
 
@@ -9,17 +9,17 @@ export class JumpNegative extends Jump {
     return 'JUN';
   }
 
-  executeOn(computer: ControlUnit) {
+  executeOn(computer: Computer) {
     if (computer.accumulator < 0 ) {
       super.executeOn(computer);
     }
   }
   toStringWith(context: ExecutionContextState) {
     const pre =  `IF A < 0 = => CP = ${this.getAddress()}
-    A < 0 = ${context.acumulator < 0}
+    A < 0 = ${context.accumulator < 0}
 `;
     let after =  `CP = ${context.programCounter}`;
-    if (context.acumulator < 0 ) {
+    if (context.accumulator < 0 ) {
       after = `CP = ${this.getAddress()}`;
     }
     return pre + after;

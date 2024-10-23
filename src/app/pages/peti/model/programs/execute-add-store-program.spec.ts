@@ -1,11 +1,11 @@
 import {Byte} from '../byte';
-import {ControlUnit} from '../control-unit';
+import {Computer} from '../computer';
 import {Memory} from '../memory';
 
 
 describe( 'Control unit', () => {
 
-  let subject: ControlUnit;
+  let subject: Computer;
   beforeEach(() => {
     const memory = new Memory(32);
     // program
@@ -17,7 +17,7 @@ describe( 'Control unit', () => {
     memory.set(8, new Byte([0, 0, 0, 0, 0, 0, 1, 0]));
     memory.set(9, new Byte([0, 0, 0, 0, 0, 0, 1, 1]));
     memory.set(10, new Byte([0, 0, 0, 0, 0, 1, 1, 1]));
-    subject = new ControlUnit(memory);
+    subject = new Computer(memory);
   });
   it('should execute add program', () => {
     subject.runInstruction();

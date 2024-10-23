@@ -1,4 +1,5 @@
 import {Instruction} from './instruction';
+import {Computer} from '../computer';
 
 export class Write extends Instruction {
   public static instructionBits = [1, 1, 1];
@@ -7,14 +8,14 @@ export class Write extends Instruction {
     return 'WRT';
   }
 
-  executeOn(computer) {
-    console.log(computer.accumulator);
+  executeOn(computer: Computer) {
+    computer.appendOutput(computer.accumulator.toString());
   }
   setAddress() {
     super.setAddress(0);
   }
 
   toStringWith(context) {
-    return `PRINT ${context.acumulator}`;
+    return `PRINT ${context.accumulator}`;
   }
 }

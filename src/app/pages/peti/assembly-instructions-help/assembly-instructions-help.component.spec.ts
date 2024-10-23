@@ -8,7 +8,7 @@ describe('AssemblyInstructionsHelpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AssemblyInstructionsHelpComponent ]
+      declarations: [ AssemblyInstructionsHelpComponent ],
     })
     .compileComponents();
   }));
